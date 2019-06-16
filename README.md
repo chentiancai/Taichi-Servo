@@ -1,9 +1,9 @@
-Arduino Taichi-Servo 库 
+Arduino Taichi-Servo 
 ========
 by Taichi-Maker / www.taichi-maker.com
 
-
-
+中文说明
+--------
 基于Arduino舵机库，增加了更多功能。
 
 基本功能列表：
@@ -12,9 +12,8 @@ by Taichi-Maker / www.taichi-maker.com
 * 可控制舵机运行速度
 * 可获取舵机输出轴的当前位置、目标位置和距离目标位置。
 
-Arduino Taichi-Servo Lib by Taichi-Maker
-www.taichi-maker.com
-
+English Description
+--------------------
 Taichi-Servo is Based on Arduino Official Servo Lib with more features added.
 
 Features:
