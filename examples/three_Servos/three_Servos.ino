@@ -56,7 +56,9 @@ void loop() {
   } else if (myservo3.getPosition() == startPos){
     myservo3.setTarget(endPos);
   }  
-    
+
+  //重要：servoUpdate函数用于更新舵运行状态，必须经常调用否则舵机无法正常运行!
+  //IMPORTANT: servoUpdate MUST be called constantly or servo CANNOT work!      
   myservo1.servoUpdate();
   myservo2.servoUpdate();
   myservo3.servoUpdate();  

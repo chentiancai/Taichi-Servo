@@ -27,11 +27,14 @@ void setup() {
 }
 
 void loop() {
+  //控制舵机往复运动 / Servo moves back and forth
   if(myservo.getPosition() == endPos){    
     myservo.setTarget(startPos);  
   } else if (myservo.getPosition() == startPos){
     myservo.setTarget(endPos);
   }   
-   
+  
+  //重要：servoUpdate函数用于更新舵运行状态，必须经常调用否则舵机无法正常运行!
+  //IMPORTANT: servoUpdate MUST be called constantly or servo CANNOT work!   
   myservo.servoUpdate();
 }
