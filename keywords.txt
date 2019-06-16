@@ -1,0 +1,24 @@
+#######################################
+# Arduino Taichi-Servo 库 关键字
+# Arduino Taichi-Servo Lib Keywords
+# 太极创客 / www.taichi-maker.com
+#######################################
+
+#######################################
+# 数据类型/Datatypes (KEYWORD1)
+#######################################
+
+TaichiServo	KEYWORD1
+PwmLed	KEYWORD1
+
+#######################################
+# 函数/Functions (KEYWORD2)
+#######################################
+
+setTarget			KEYWORD2
+getTarget   		KEYWORD2
+getDistanceToGo		KEYWORD2
+getPosition			KEYWORD2
+servoUpdate 		EYWORD2
+
+
