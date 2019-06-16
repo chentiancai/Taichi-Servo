@@ -1,4 +1,4 @@
-Arduino Taichi-Servo 
+Arduino Taichi-Servo 库
 ========
 by Taichi-Maker / www.taichi-maker.com
 
