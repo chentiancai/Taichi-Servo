@@ -30,7 +30,7 @@ void loop() {
 
   //控制舵机往复运动 / Servo moves back and forth
   if(myservo.getPosition() == endPos){  
-    myservo.setServoSpeed(100);    //设置舵机运行速度为50
+    myservo.setServoSpeed(100);    //设置舵机运行速度为100
     myservo.setTarget(startPos);  
   } else if (myservo.getPosition() == startPos){
     myservo.setServoSpeed(10);   //设置舵机运行速度为10
