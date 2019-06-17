@@ -3,12 +3,11 @@
 #include "TaichiServo.h"
 
 TaichiServo::TaichiServo(){
-  
 }
 
 TaichiServo::TaichiServo(long usrServoDelay){
-  if (usrServoDelay > DEFAULT_SERVO_DELAY){
-    delayTarget = usrServoDelay;
+  if (usrServoDelay > DEFAULT_SERVO_SPEED){
+    servoSpeed = usrServoDelay;
   }  
 }
 
@@ -30,13 +29,16 @@ int TaichiServo::getDistanceToGo(){
   return distance2Go;
 }
 
+int TaichiServo::setServoSpeed(int usrServoSpeed){
+  servoSpeed = usrServoSpeed;
+}
+
 void TaichiServo::servoUpdate(){
   servoPos = this->read();
-  if (delayCouter <= delayTarget){
+  if (delayCouter < servoSpeed){
     delayCouter++;
   }else {
     delayCouter = 0;
-    
     distance2Go = servoTarget - servoPos;
     if(distance2Go > 0){
       servoPos++;
