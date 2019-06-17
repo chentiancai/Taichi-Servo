@@ -19,6 +19,7 @@ setTarget			KEYWORD2
 getTarget   		KEYWORD2
 getDistanceToGo		KEYWORD2
 getPosition			KEYWORD2
-servoUpdate 		EYWORD2
+servoUpdate 		KEYWORD2
+setServoSpeed		KEYWORD2
 
 
