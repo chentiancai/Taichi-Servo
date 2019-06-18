@@ -8,10 +8,15 @@ TaichiServo::TaichiServo(){
 TaichiServo::TaichiServo(long usrServoDelay){
   if (usrServoDelay > DEFAULT_SERVO_SPEED){
     servoSpeed = usrServoDelay;
-  }  
+  }
 }
 
 void TaichiServo::setTarget(int usrTarget){
+  if (usrTarget > 180){
+    usrTarget = 180;
+  } else if (usrTarget < 0){
+    usrTarget = 0;
+  } 
   servoTarget = usrTarget;
 }
 
@@ -45,7 +50,7 @@ void TaichiServo::servoUpdate(){
       this->write(servoPos);
     } else if (distance2Go < 0){
       servoPos--;
-      this->write(servoPos);    
-    } 
+      this->write(servoPos);
+    }
   }
 }
