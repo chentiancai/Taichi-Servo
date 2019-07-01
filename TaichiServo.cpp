@@ -39,18 +39,23 @@ int TaichiServo::setServoSpeed(int usrServoSpeed){
 }
 
 void TaichiServo::servoUpdate(){
-  servoPos = this->read();
-  if (delayCouter < servoSpeed){
-    delayCouter++;
-  }else {
-    delayCouter = 0;
-    distance2Go = servoTarget - servoPos;
-    if(distance2Go > 0){
-      servoPos++;
-      this->write(servoPos);
-    } else if (distance2Go < 0){
-      servoPos--;
-      this->write(servoPos);
+    servoPos = this->read(); 				//获取当前舵机的位置
+    distance2Go = servoTarget - servoPos;   //获取当前位置与目标位置的距离
+	
+    if (distance2Go != 0) {					//如果当前位置与目标位置间存在距离
+											//检查速度延迟参数是否达到设定数值
+	  if (delayCouter < servoSpeed){		//如果速度延迟参数尚未达到设定数值
+		delayCouter++;						//延迟参数自加
+	  }else {								//如果速度延迟参数已经达到设定数值
+		delayCouter = 0;					//延迟参数复位清零
+		
+		if(distance2Go > 0){				//如果距离为正
+		  servoPos++;						
+		  this->write(servoPos);			//舵机正转一步
+		} else if (distance2Go < 0){		//如果距离为负
+		  servoPos--;							
+		  this->write(servoPos);			//舵机反转一步
+		}
+	  }
     }
-  }
 }
