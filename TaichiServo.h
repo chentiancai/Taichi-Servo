@@ -13,7 +13,8 @@ class TaichiServo: public Servo{
     void setTarget(int usrTarget);          //将用户输入的坐标位置作为目标位置 / set servo's target pos
     int getTarget();                        //获取舵机目的位置 / get servo target pos
     int getPosition();                      //获取舵机当前位置 / get servo current position
-    int setServoSpeed(int usrServoSpeed);   //设置舵机速度 / set servo speed
+    void setServoSpeed(int usrServoSpeed);  //设置舵机速度 / set servo speed
+	int getServoSpeed();					//获取舵机速度 / get servo speed
     void servoUpdate();                     //舵机动起来 / make servo move
     int getDistanceToGo();                  //获取舵机当前位置与目标舵机位置之间的差距 
                                             // get the distance between target and current position     

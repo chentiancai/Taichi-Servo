@@ -21,5 +21,4 @@ getDistanceToGo		KEYWORD2
 getPosition			KEYWORD2
 servoUpdate 		KEYWORD2
 setServoSpeed		KEYWORD2
-
-
+getServoSpeed		KEYWORD2

@@ -34,8 +34,12 @@ int TaichiServo::getDistanceToGo(){
   return distance2Go;
 }
 
-int TaichiServo::setServoSpeed(int usrServoSpeed){
+void TaichiServo::setServoSpeed(int usrServoSpeed){
   servoSpeed = usrServoSpeed;
+}
+
+int TaichiServo::getServoSpeed(){
+  return servoSpeed;
 }
 
 void TaichiServo::servoUpdate(){
